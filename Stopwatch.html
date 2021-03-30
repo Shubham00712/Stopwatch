@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="Stopwatch.css"/>
+<script src="Stopwatch.js"></script>
+</head>
+<body style="background-color:silver;">
+<div width="100vh" id="div1">
+<span id="heading">STOPWATCH</span>
+</div><br>
+<div id="display1" width="100%">
+<div id="timer">
+<div class="timer" id="hr1" style=" margin-left:0;">
+<center><span class="info">HH</span></center>
+<div class="res" id="hh1" >0</div>
+</div>
+<div class="timer" id="hr">
+<center><span class="info">HH</span></center>
+<div class="res" id="hh">0</div>
+</div><span style="font-size:50px">:</span>
+<div class="timer" id="min1">
+<center><span class="info">MM</span></center>
+<div class="res" id="mm1">0</div>
+</div>
+<div class="timer" id="min">
+<center><span class="info">MM</span></center>
+<div class="res" id="mm">0</div>
+</div><span style="font-size:50px">:</span>
+<div class="timer" id="sec1">
+<center><span class="info">SS</span></center>
+<div class="res" id="ss1">0</div>
+</div>
+<div class="timer" id="sec">
+<center><span class="info">SS</span></center>
+<div class="res" id="ss">0</div>
+</div>
+</div>
+</div><br>
+<div id="bt" >
+<button id="start" class="btn">START</button>
+<button id="stop" class="btn" disabled>STOP</button>
+<button id="reset" class="btn" disabled>RESET</button>
+</div>
+</body>
+</html>

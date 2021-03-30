@@ -1,0 +1,58 @@
+$(document).ready(function(){
+	var s=s1=m=m1=h=h1=0;
+	var v;
+	$("#stop").click(function stop(){
+		clearInterval(v);
+		$("#start").prop('disabled',false);
+		$(this).prop('disabled',true);
+		$("#reset").prop('disabled',false);
+	})
+	$("#reset").click(function(){
+		clearInterval(v);
+		s=s1=m=m1=h=h1=0;
+		$("#ss").text(s);$("#ss1").text(s1);$("#mm").text(m);$("#mm1").text(m1);$("#hh1").text(h1);
+		$("#start").prop('disabled',false);
+		$("#stop").prop('disabled',true);
+		$(this).prop('disabled',true);
+	})
+	$("#start").click(function(){
+	$("#stop").prop('disabled',false);
+	$("#reset").prop('disabled',false);
+		$("#start").prop('disabled',true);
+		v=setInterval(function start1(){
+			if(s==9){
+				s=0;
+				if(s1==5){
+					s1=0;
+					if(m==9){
+						m=0;
+						if(m1==5){
+							m1=0;
+							if(h==9){
+								h=0;
+								h1++;
+							}
+							else{
+							if(h1==2&&h>=4){
+								s=s1=m=m1=h=h1=0;
+							$("#ss").text(s);$("#ss1").text(s1);$("#mm").text(m);$("#mm1").text(m1);$("#hh1").text(h1);
+							clearInterval(v);
+							}
+							else
+							h++;
+							}
+							}
+						else
+						m1++;
+					}
+					else
+					m++;
+				}
+				else
+				s1++;
+			}
+			else
+				s++;
+			$("#ss").text(s);$("#ss1").text(s1);$("#mm").text(m);$("#mm1").text(m1);$("#hh").text(h);$("#hh1").text(h1);},1000);
+	})
+})
